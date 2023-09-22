@@ -1,0 +1,12 @@
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.csproj.AssemblyReference.cache
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.Form1.resources
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.Properties.Resources.resources
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.csproj.GenerateResource.cache
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.csproj.CoreCompileInputs.cache
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\bin\Debug\Projeto.exe.config
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\bin\Debug\Projeto.exe
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\bin\Debug\Projeto.pdb
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.exe
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.pdb
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.Pesquisa.resources
+C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.Ficha.resources
