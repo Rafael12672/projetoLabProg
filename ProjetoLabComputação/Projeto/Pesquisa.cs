@@ -15,17 +15,53 @@ namespace Projeto
         public Pesquisa()
         {
             InitializeComponent();
+            ListarTodosPacientes();
+        }
+
+        public void ListarTodosPacientes()
+        {
+            listBox1.Items.Clear();
+            foreach (var pessoa in Program.pessoas)
+            {
+                if(!pessoa.PossuiDoencaCronica)
+                 {
+                    listBox1.Items.Add("Nome: " + pessoa.Nome + " CPF: " + pessoa.Cpf + " Data Agendada: " + pessoa.Date.ToString("dd/MM/yyyy") +
+                    " Valor da Consulta: R$" + pessoa.Preco.ToString("0.00"));
+                } else
+                {
+                    listBox1.Items.Add("Nome: " + pessoa.Nome + " CPF: " + pessoa.Cpf + " Data Agendada: " + pessoa.Date.ToString("dd/MM/yyyy") +
+                    " Valor da Consulta: R$" + pessoa.Preco.ToString("0.00") + " Doença(s) Crônica(s): " + pessoa.DoencaCronica);
+                }
+            }
         }
 
         
         
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            listBox1.Items.Clear();
             foreach (var pessoa in Program.pessoas)
             {
-                listBox1.Items.Add("Nome: " + pessoa.Nome + " CPF: " + pessoa.Cpf + " Data Agendada: " + pessoa.Date + " Valor da Consulta: " + pessoa.Preco);
+                if (pessoa.Nome.Equals(textBox1.Text))
+                {
+                    if (!pessoa.PossuiDoencaCronica)
+                    {
+                        listBox1.Items.Add("Nome: " + pessoa.Nome + " CPF: " + pessoa.Cpf + " Data Agendada: " + pessoa.Date.ToString("dd/MM/yyyy") +
+                        " Valor da Consulta: R$" + pessoa.Preco.ToString("0.00"));
+                    } else
+                    {
+                        listBox1.Items.Add("Nome: " + pessoa.Nome + " CPF: " + pessoa.Cpf + " Data Agendada: " + pessoa.Date.ToString("dd/MM/yyyy") +
+                        " Valor da Consulta: R$" + pessoa.Preco.ToString("0.00") + " Doença(s) Crônica(s): " + pessoa.DoencaCronica);
+                    }
+                }
+                
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            ListarTodosPacientes();
         }
     }
 }

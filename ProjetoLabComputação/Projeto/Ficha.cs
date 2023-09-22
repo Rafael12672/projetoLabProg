@@ -17,61 +17,108 @@ namespace Projeto
             InitializeComponent(); 
         }
 
-
-       
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Pessoa P = new Pessoa();
-            P.Nome = textBox1.Text;
-            P.Cpf = textBox2.Text;
-            DateTime startDate = monthCalendar1.SelectionStart.Date;
-            startDate = P.Date;
-            if(radioButton1.Checked == true)
+            string nome = textBox1.Text;
+            string cpf = textBox2.Text;
+            DateTime date = calendar.SelectionStart.Date;
+            double preco = 0;
+            bool possuiDoencaCronica = checkBox4.Checked;
+            string doencaCronica = "";
+
+            if (!string.IsNullOrEmpty(outrasDoencas.Text))
+                possuiDoencaCronica = true;
+
+            if (!checkBox1.Checked)
+                if (!checkBox2.Checked &&
+                    !checkBox3.Checked &&
+                    !checkBox4.Checked &&
+                    string.IsNullOrEmpty(outrasDoencas.Text))
+                {
+                    MessageBox.Show("Se possui doença cronica deve marcar uma opção, ou marcar que não possui nenhuma doença", "Cadastro inválido");
+                    return;
+                }
+                
+            if (checkBox2.Checked)
+                doencaCronica += $"| {checkBox2.Text} | ";
+
+            if (checkBox3.Checked)
+                doencaCronica += $"| {checkBox3.Text} | ";
+
+            if (checkBox4.Checked)
+                doencaCronica += $"| {checkBox4.Text} | ";
+
+            if(!string.IsNullOrEmpty(outrasDoencas.Text))
+                doencaCronica += $"| {outrasDoencas.Text} | ";
+
+
+            if (radioButton1.Checked == true)
             {
-                P.Preco += 300.00;
+                preco += 300.00;
             }
             if (radioButton2.Checked == true)
             {
-                P.Preco += 500.00;
+                preco += 500.00;
             }
-            if (radioButton1.Checked == true)
+            if (radioButton3.Checked == true)
             {
-                P.Preco += 800.00;
+                preco += 800.00;
             }
-            if (radioButton1.Checked == true)
+            if (radioButton4.Checked == true)
             {
-                P.Preco += 600.00;
+                preco += 600.00;
             }
-            if (radioButton1.Checked == true)
+            if (radioButton5.Checked == true)
             {
-                P.Preco += 500.00;
+                preco += 500.00;
             }
-            if (radioButton1.Checked == true)
+            if (radioButton6.Checked == true)
             {
-                P.Preco += 400.00;
+                preco += 400.00;
             }
-            if(comboBox1.Items.Equals("João"))
+            if(comboBox1.SelectedItem == null)
             {
-                P.Preco += 900.00;
+                MessageBox.Show("O campo médico é obrigatório!", "Cadastro inválido");
+                return;
             }
-            if (comboBox1.Items.Equals("Marcos"))
+            if(comboBox1.SelectedItem.Equals("João - Oftamologista"))
             {
-                P.Preco += 1000.00;
+                preco += 900.00;
             }
-            if (comboBox1.Items.Equals("Gabriel"))
+            if (comboBox1.SelectedItem.Equals("Marcos - Ortopedista"))
             {
-                P.Preco += 1200.00;
+                preco += 1000.00;
             }
-            Program.pessoas.Add(P);
-            lblTest.Text = startDate.ToString();
-            MessageBox.Show("Cadastrado Com Sucesso");
+            if (comboBox1.SelectedItem.Equals("Gabriel - Pediatra"))
+            {
+                preco += 1200.00;
+            }
 
+            Program.pessoas.Add(new Paciente(nome, cpf, date, preco, doencaCronica, possuiDoencaCronica));
+            MessageBox.Show("Cadastrado Com Sucesso");
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkBox1.Checked)
+            {
+                outrasDoencas.Enabled = false;
+                checkBox4.Enabled = false;
+                checkBox2.Enabled = false;
+                checkBox3.Enabled = false;
 
+                outrasDoencas.Text = "";
+                checkBox4.Checked = false;
+                checkBox3.Checked = false;
+                checkBox2.Checked = false;
+            }    
+            else
+            {
+                outrasDoencas.Enabled = true;
+                checkBox4.Enabled = true;
+                checkBox2.Enabled = true;
+                checkBox3.Enabled = true;
+            }
         }
     }
 }

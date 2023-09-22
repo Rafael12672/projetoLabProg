@@ -64,7 +64,7 @@
     <Compile Include="Pesquisa.Designer.cs">
       <DependentUpon>Pesquisa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pessoa.cs" />
+    <Compile Include="Paciente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ficha.resx">

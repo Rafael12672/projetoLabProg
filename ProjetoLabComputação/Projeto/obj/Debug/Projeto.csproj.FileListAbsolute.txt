@@ -10,3 +10,15 @@ C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação
 C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.pdb
 C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.Pesquisa.resources
 C:\Users\rafae\OneDrive\Documentos\Aulas\4°Periodo\Laboratorio de Programação\Aula02\ProjetoLabComputação\Projeto\obj\Debug\Projeto.Ficha.resources
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\obj\Debug\Projeto.csproj.AssemblyReference.cache
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\obj\Debug\Projeto.Ficha.resources
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\obj\Debug\Projeto.Form1.resources
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\obj\Debug\Projeto.Pesquisa.resources
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\obj\Debug\Projeto.Properties.Resources.resources
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\obj\Debug\Projeto.csproj.GenerateResource.cache
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\obj\Debug\Projeto.csproj.CoreCompileInputs.cache
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\obj\Debug\Projeto.exe
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\obj\Debug\Projeto.pdb
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\bin\Debug\Projeto.exe.config
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\bin\Debug\Projeto.exe
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\bin\Debug\Projeto.pdb
