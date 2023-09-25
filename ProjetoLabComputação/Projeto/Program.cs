@@ -18,7 +18,7 @@ namespace Projeto
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
-        public static List<Paciente> pessoas = new List<Paciente>();
+        public static List<Paciente> pacientes = new List<Paciente>();
 
     }
 }

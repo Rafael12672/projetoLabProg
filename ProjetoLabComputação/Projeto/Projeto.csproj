@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta.Designer.cs">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ficha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="Paciente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Consulta.resx">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ficha.resx">
       <DependentUpon>Ficha.cs</DependentUpon>
     </EmbeddedResource>

@@ -94,7 +94,7 @@ namespace Projeto
                 preco += 1200.00;
             }
 
-            Program.pessoas.Add(new Paciente(nome, cpf, date, preco, doencaCronica, possuiDoencaCronica));
+            Program.pacientes.Add(new Paciente(nome, cpf, date, preco, doencaCronica, possuiDoencaCronica));
             MessageBox.Show("Cadastrado Com Sucesso");
         }
 

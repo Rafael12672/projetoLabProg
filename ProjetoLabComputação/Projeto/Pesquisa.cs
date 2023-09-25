@@ -21,7 +21,7 @@ namespace Projeto
         public void ListarTodosPacientes()
         {
             listBox1.Items.Clear();
-            foreach (var pessoa in Program.pessoas)
+            foreach (var pessoa in Program.pacientes)
             {
                 if(!pessoa.PossuiDoencaCronica)
                  {
@@ -40,7 +40,7 @@ namespace Projeto
         private void button1_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            foreach (var pessoa in Program.pessoas)
+            foreach (var pessoa in Program.pacientes)
             {
                 if (pessoa.Nome.Equals(textBox1.Text))
                 {

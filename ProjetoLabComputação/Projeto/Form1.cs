@@ -54,5 +54,11 @@ namespace Projeto
             Pesquisa pesquisa = new Pesquisa();
             pesquisa.ShowDialog();
         }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consulta consultar = new Consulta();
+            consultar.ShowDialog();
+        }
     }
 }
