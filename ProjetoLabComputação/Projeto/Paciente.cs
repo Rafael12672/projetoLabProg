@@ -14,8 +14,9 @@ namespace Projeto
         private double preco;
         private bool possuiDoencaCronica;
         private string doencaCronica;
+        
 
-        public Paciente(string nome, string cpf, DateTime date, double preco, string doencaCronica, bool possuiDoencaCronica)
+        public Paciente(string nome, string cpf, DateTime date, double preco, string doencaCronica, bool possuiDoencaCronica, string medico)
         {
             Nome = nome;
             Cpf = cpf;
@@ -23,7 +24,8 @@ namespace Projeto
             Preco = preco;
             DoencaCronica = doencaCronica;
             PossuiDoencaCronica = possuiDoencaCronica;
-
+            MedicoConsulta = medico;
+            Consultado = false;
         }
 
         public string Nome { get => nome; set => nome = value; }
@@ -32,5 +34,7 @@ namespace Projeto
         public double Preco { get => preco; set => preco = value; }
         public string DoencaCronica { get => doencaCronica; set => doencaCronica = value; }
         public bool PossuiDoencaCronica { get => possuiDoencaCronica; set => possuiDoencaCronica = value; }
+        public string MedicoConsulta { get; set; }
+        public bool Consultado { get; set; }
     }
 }

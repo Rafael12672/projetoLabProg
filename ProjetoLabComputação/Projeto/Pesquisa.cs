@@ -21,16 +21,20 @@ namespace Projeto
         public void ListarTodosPacientes()
         {
             listBox1.Items.Clear();
-            foreach (var pessoa in Program.pessoas)
+            foreach (var paciente in Program.pacientes)
             {
-                if(!pessoa.PossuiDoencaCronica)
-                 {
-                    listBox1.Items.Add("Nome: " + pessoa.Nome + " CPF: " + pessoa.Cpf + " Data Agendada: " + pessoa.Date.ToString("dd/MM/yyyy") +
-                    " Valor da Consulta: R$" + pessoa.Preco.ToString("0.00"));
-                } else
+                if (!paciente.Consultado)
                 {
-                    listBox1.Items.Add("Nome: " + pessoa.Nome + " CPF: " + pessoa.Cpf + " Data Agendada: " + pessoa.Date.ToString("dd/MM/yyyy") +
-                    " Valor da Consulta: R$" + pessoa.Preco.ToString("0.00") + " Doença(s) Crônica(s): " + pessoa.DoencaCronica);
+                    if (!paciente.PossuiDoencaCronica)
+                    {
+                        listBox1.Items.Add("Nome: " + paciente.Nome + " CPF: " + paciente.Cpf + " Data Agendada: " + paciente.Date.ToString("dd/MM/yyyy") +
+                        " Valor da Consulta: R$" + paciente.Preco.ToString("0.00"));
+                    }
+                    else
+                    {
+                        listBox1.Items.Add("Nome: " + paciente.Nome + " CPF: " + paciente.Cpf + " Data Agendada: " + paciente.Date.ToString("dd/MM/yyyy") +
+                        " Valor da Consulta: R$" + paciente.Preco.ToString("0.00") + " Doença(s) Crônica(s): " + paciente.DoencaCronica);
+                    }
                 }
             }
         }
@@ -40,21 +44,24 @@ namespace Projeto
         private void button1_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            foreach (var pessoa in Program.pessoas)
+            foreach (var pessoa in Program.pacientes)
             {
-                if (pessoa.Nome.Equals(textBox1.Text))
+                if (!pessoa.Consultado)
                 {
-                    if (!pessoa.PossuiDoencaCronica)
+                    if (pessoa.Nome.Equals(textBox1.Text))
                     {
-                        listBox1.Items.Add("Nome: " + pessoa.Nome + " CPF: " + pessoa.Cpf + " Data Agendada: " + pessoa.Date.ToString("dd/MM/yyyy") +
-                        " Valor da Consulta: R$" + pessoa.Preco.ToString("0.00"));
-                    } else
-                    {
-                        listBox1.Items.Add("Nome: " + pessoa.Nome + " CPF: " + pessoa.Cpf + " Data Agendada: " + pessoa.Date.ToString("dd/MM/yyyy") +
-                        " Valor da Consulta: R$" + pessoa.Preco.ToString("0.00") + " Doença(s) Crônica(s): " + pessoa.DoencaCronica);
+                        if (!pessoa.PossuiDoencaCronica)
+                        {
+                            listBox1.Items.Add("Nome: " + pessoa.Nome + " CPF: " + pessoa.Cpf + " Data Agendada: " + pessoa.Date.ToString("dd/MM/yyyy") +
+                            " Valor da Consulta: R$" + pessoa.Preco.ToString("0.00"));
+                        }
+                        else
+                        {
+                            listBox1.Items.Add("Nome: " + pessoa.Nome + " CPF: " + pessoa.Cpf + " Data Agendada: " + pessoa.Date.ToString("dd/MM/yyyy") +
+                            " Valor da Consulta: R$" + pessoa.Preco.ToString("0.00") + " Doença(s) Crônica(s): " + pessoa.DoencaCronica);
+                        }
                     }
                 }
-                
             }
         }
 

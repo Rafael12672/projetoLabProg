@@ -22,3 +22,4 @@ C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\obj\Debug\Projeto.pdb
 C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\bin\Debug\Projeto.exe.config
 C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\bin\Debug\Projeto.exe
 C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\bin\Debug\Projeto.pdb
+C:\GitHub\projetoLabProg\ProjetoLabComputação\Projeto\obj\Debug\Projeto.Consulta.resources

@@ -25,6 +25,7 @@ namespace Projeto
             double preco = 0;
             bool possuiDoencaCronica = false;
             string doencaCronica = "";
+            string medicoSelecionado = "";
 
             if (!string.IsNullOrEmpty(outrasDoencas.Text))
                 possuiDoencaCronica = true;
@@ -95,18 +96,41 @@ namespace Projeto
             if(comboBox1.SelectedItem.Equals("João - Oftamologista"))
             {
                 preco += 900.00;
+                medicoSelecionado = "João";
             }
             if (comboBox1.SelectedItem.Equals("Marcos - Ortopedista"))
             {
                 preco += 1000.00;
+                medicoSelecionado = "Marcos";
             }
             if (comboBox1.SelectedItem.Equals("Gabriel - Pediatra"))
             {
                 preco += 1200.00;
+                medicoSelecionado = "Gabriel";
             }
 
-            Program.pessoas.Add(new Paciente(nome, cpf, date, preco, doencaCronica, possuiDoencaCronica));
+            Program.pacientes.Add(new Paciente(nome, cpf, date, preco, doencaCronica, possuiDoencaCronica, medicoSelecionado));
             MessageBox.Show("Cadastrado Com Sucesso");
+            LimparCampos();
+        }
+
+        public void LimparCampos()
+        {
+            foreach(Control control in Controls)
+            {
+                if(control is TextBox)
+                {
+                    ((TextBox)control).Clear();
+                }
+                if(control is RadioButton)
+                {
+                    ((RadioButton)control).Checked = false;
+                }
+                if (control is CheckBox)
+                {
+                    ((CheckBox)control).Checked = false;
+                }
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -133,6 +157,11 @@ namespace Projeto
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
