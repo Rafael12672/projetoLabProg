@@ -254,6 +254,7 @@
             this.checkBox3.TabIndex = 18;
             this.checkBox3.Text = "Asma";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox4
             // 

@@ -23,7 +23,7 @@ namespace Projeto
             string cpf = textBox2.Text;
             DateTime date = calendar.SelectionStart.Date;
             double preco = 0;
-            bool possuiDoencaCronica = checkBox4.Checked;
+            bool possuiDoencaCronica = false;
             string doencaCronica = "";
 
             if (!string.IsNullOrEmpty(outrasDoencas.Text))
@@ -40,16 +40,27 @@ namespace Projeto
                 }
                 
             if (checkBox2.Checked)
+            {
                 doencaCronica += $"| {checkBox2.Text} | ";
+                possuiDoencaCronica = true;
+            }
 
             if (checkBox3.Checked)
+            {
                 doencaCronica += $"| {checkBox3.Text} | ";
-
+                possuiDoencaCronica = true;
+            }
             if (checkBox4.Checked)
+            {
                 doencaCronica += $"| {checkBox4.Text} | ";
+                possuiDoencaCronica = true;
+            }
 
-            if(!string.IsNullOrEmpty(outrasDoencas.Text))
+            if (!string.IsNullOrEmpty(outrasDoencas.Text))
+            {
                 doencaCronica += $"| {outrasDoencas.Text} | ";
+                possuiDoencaCronica = true;
+            }
 
 
             if (radioButton1.Checked == true)
@@ -119,6 +130,11 @@ namespace Projeto
                 checkBox2.Enabled = true;
                 checkBox3.Enabled = true;
             }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
