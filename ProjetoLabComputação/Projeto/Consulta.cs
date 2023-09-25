@@ -73,21 +73,30 @@ namespace Projeto
                     break;
                 }
             }
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
 
-            string caminhoArquivo = 
-                $"C:\\GitHub\\projetoLabProg\\ProjetoLabComputação\\receitas\\"+ DateTime.Now.ToString("dd.MM.yyyy.HH.mm.ss") +"receita.txt";
-            using (StreamWriter sw = new StreamWriter(caminhoArquivo))
+            saveFileDialog.Filter = "Arquivos de Texto (*.txt)|*.txt|Todos os Arquivos (*.*)|*.*";
+            saveFileDialog.Title = "Salvar arquivo";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // Escreva dados no arquivo
-                sw.WriteLine($"Médico da consulta - {p.MedicoConsulta}");
-                sw.WriteLine($"Nome do paciente - {p.Nome}");
-                sw.WriteLine($"====================================================");
-                sw.WriteLine($"Receita:\n\n{textBox2.Text}");
-                sw.WriteLine($"====================================================");
-                sw.WriteLine($"Sintomas:\n\n{textBox1.Text}");
-                sw.WriteLine($"====================================================");
+                string filePath = saveFileDialog.FileName;
+                string conteudo = "";
+                conteudo += $"Médico da consulta - {p.MedicoConsulta}\n";
+                conteudo += $"Nome do paciente - {p.Nome}";
+                conteudo += $"\n====================================================\n";
+                conteudo += $"Receita:\n\n{textBox2.Text}";
+                conteudo += $"\n====================================================\n";
+                conteudo += $"Sintomas:\n\n{textBox1.Text}";
+                conteudo += $"\n====================================================";
+                File.WriteAllText(filePath, conteudo);
             }
             MessageBox.Show("Receita gerada com sucesso!", "Recita gerada");
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
